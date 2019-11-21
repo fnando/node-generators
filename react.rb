@@ -66,6 +66,15 @@ class ReactGenerator < Thor::Group
     copy_file "react/tsconfig.json", "tsconfig.json"
     template ".tool-versions.erb", ".tool-versions"
   end
+
+  def commit_files
+    inside(destination_root) do
+      run "rm -rf .git"
+      run "git init"
+      run "git add ."
+      run "git commit -m 'Initial commit.'"
+    end
+  end
 end
 
 generator = ReactGenerator.new
