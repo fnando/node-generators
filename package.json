@@ -2,7 +2,7 @@
   "name": "@fnando/new",
   "version": "0.0.2",
   "license": "MIT",
-  "repository": "https://github.com/fnando/node-templates",
+  "repository": "https://github.com/fnando/node-generators",
   "bin": {
     "react": "./react.rb"
   },
